@@ -1,0 +1,4 @@
+#https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow: /*.pdf$
+Sitemap: https://www.z347.info/sitemap.xml

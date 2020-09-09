@@ -1,0 +1,126 @@
+@import "../../scss/partials/params";
+@import "../../scss/partials/mixins";
+@import "../../scss/partials/media";
+
+div.project {
+  padding: 6px 30px;
+  border: 1px solid $white-muted;
+  border-bottom: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: $big-normal;
+  color: $black-light;
+
+  @include screen-580 {
+    flex-direction: column;
+    padding: 10px 10px 6px 10px;
+    overflow: hidden;
+  }
+
+  &:hover {
+    background-color: $white-light;
+  }
+
+  span {
+    font-weight: 400;
+    font-size: 15px;
+
+    @include screen-580 {
+      display: none;
+    }
+  }
+
+  h5 {
+    margin-left: 10px;
+    font-weight: 400;
+    font-size: 15px;
+
+    @include screen-580 {
+      text-align: center;
+      margin-left: 0;
+      font-size: 14px;
+    }
+  }
+
+  svg {
+    margin-left: auto;
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+
+    @include screen-580 {
+      margin-top: 4px;
+      padding: 3px;
+      margin-left: 0;
+    }
+
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
+div.project.active {
+  background-color: $orange;
+  color: $white;
+
+  span {
+    color: $white;
+    font-weight: 700;
+  }
+
+  h5 {
+    font-weight: 700;
+  }
+
+  svg {
+    &:hover {
+      color: $black-light;
+    }
+  }
+}
+
+ul.description {
+  @include clear-list;
+  padding: 25px 40px;
+  border: 1px solid $white-muted;
+  border-top: none;
+
+  @include screen-580 {
+    padding: 25px 20px;
+  }
+
+  li {
+    font-size: $normal;
+    color: $black-light;
+    margin-bottom: 8px;
+
+    @include screen-580 {
+      font-size: 12px;
+    }
+
+    span {
+      font-weight: 700;
+      color: $black-light;
+      display: inline-block;
+    }
+
+    a {
+      display: inline-block;
+      color: $navy;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+
+    p {
+      display: inline;
+    }
+  }
+}
+
+ul.description.hide {
+  display: none;
+}

@@ -1,0 +1,85 @@
+@import "../../scss/partials/params";
+@import "../../scss/partials/mixins";
+@import "../../scss/partials/media";
+
+nav {
+  position: fixed;
+  right: 30px;
+  left: 30px;
+  top: 25px;
+  padding: 30px 20px 30px 20px;
+  background-color: $white;
+
+  @include screen-840 {
+    top: 15px;
+    right: 15px;
+    left: 15px;
+    //bottom: 15px;
+  }
+
+  ul {
+    @include clear-list;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+
+    @include screen-840 {
+      display: none;
+    }
+
+    li {
+      margin-left: 50px;
+
+      a {
+        color: $black-light;
+        cursor: pointer;
+        font-size: $normal;
+        text-decoration: none;
+
+        &:hover,
+        &.active {
+          color: $orange;
+        }
+      }
+
+      a.contacts {
+        display: inline-block;
+        padding: 10px 30px;
+        border: 1px solid $white-muted;
+
+        &:hover,
+        &.active {
+          color: $white;
+          background-color: $orange;
+          transition-duration: 100ms;
+          border-color: $white;
+        }
+      }
+    }
+  }
+
+  .wrapper-hamburger.wrapper-hamburger-active ~ ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    opacity: 0; /*Элемент полностью прозрачный (невидимый)*/
+    transition: 500ms; /*Скорость перехода состояния элемента*/
+    animation: show 1s 1; /* Указываем название анимации, её время и количество повторов*/
+    animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+    animation-delay: 500ms; /* Задержка перед началом */
+
+    li {
+      margin: 15px 0 15px 0;
+    }
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

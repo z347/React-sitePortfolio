@@ -1,0 +1,31 @@
+@import "scss/partials/params";
+@import "scss/partials/mixins";
+@import "scss/partials/media";
+
+div.app {
+  height: 100%;
+
+  header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  > div.container {
+    height: 100%;
+    background-color: $white;
+
+    > main#content {
+      background-color: $white;
+      padding-bottom: 150px;
+
+      > div {
+        max-width: $max-width-content;
+        padding: 0 40px;
+        margin: 0 auto;
+      }
+    }
+  }
+}

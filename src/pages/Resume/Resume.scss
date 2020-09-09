@@ -1,0 +1,92 @@
+@import "../../scss/partials/params";
+@import "../../scss/partials/mixins";
+@import "../../scss/partials/media";
+
+main#content {
+  > div {
+    img.avatar {
+      float: left;
+      margin-right: 20px;
+      border-radius: 50px;
+      width: 100px;
+      height: 100px;
+
+      @include screen-580 {
+        float: none;
+        margin: 0 auto 15px auto;
+        display: block;
+        justify-content: center;
+      }
+    }
+
+    p {
+      font-size: $normal;
+      color: $black-light;
+      line-height: 23px;
+      margin-bottom: 40px;
+
+      @include screen-580 {
+        text-align: center;
+      }
+    }
+
+    address.resume {
+      margin-top: 30px;
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include clear-list;
+
+        @include screen-580 {
+          flex-direction: column;
+          align-content: center;
+        }
+
+        li {
+          margin-top: 12px;
+          flex-basis: 30%;
+          font-size: $normal;
+          font-style: normal;
+          color: $orange;
+          font-weight: 400;
+
+          @include screen-840 {
+            flex-basis: 50%;
+            font-size: $normal;
+            text-align: center;
+          }
+
+          strong {
+            color: $black-light;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+
+    a.cv {
+      display: block;
+      padding: 8px;
+      width: 140px;
+      margin: 50px auto 100px auto;
+      text-align: center;
+      font-size: $big-normal + 1;
+      color: $orange;
+      border: 1px solid $orange;
+      transition-duration: 400ms;
+
+      &:hover {
+        background-color: $orange;
+        color: $white;
+        transition-duration: 400ms;
+      }
+
+      @include screen-840 {
+        margin: 50px auto 100px auto;
+      }
+    }
+  }
+}

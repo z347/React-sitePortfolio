@@ -1,0 +1,24 @@
+@import "../../scss/partials/params";
+@import "../../scss/partials/mixins";
+@import "../../scss/partials/media";
+
+div.topic {
+  h3 {
+    color: $black;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: $big-normal - 2;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    box-shadow: inset 0 -6px 0px $yellow;
+
+    @include screen-580 {
+      text-align: center;
+      display: block;
+      margin-bottom: 35px;
+      box-shadow: none;
+      background-color: $yellow;
+    }
+  }
+}

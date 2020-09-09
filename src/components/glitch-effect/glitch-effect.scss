@@ -1,0 +1,219 @@
+@import "../../scss/partials/params";
+@import "../../scss/partials/media";
+
+// Text style
+.glitch-effect {
+  font-size: $super-large;
+  color: $black;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  word-spacing: 0.5em;
+  margin: 10px 0 10px 0;
+
+  @include screen-840 {
+    font-size: $large;
+  }
+
+  @include screen-580 {
+    text-align: center;
+    margin: 0 20px;
+  }
+
+  @include screen-480 {
+    margin: 0 30px;
+    font-size: $small;
+  }
+}
+
+.glitch-effect.hiding {
+  visibility: hidden
+}
+
+// Glitch Animations
+.glitch-effect {
+  position: relative;
+
+  @include screen-580 {
+    position: static;
+  }
+}
+
+.glitch-effect:before,
+.glitch-effect:after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $white;
+  clip: rect(0, 0, 0, 0);
+}
+
+.glitch-effect:after {
+  left: 2px;
+  text-shadow: -1px 0 $orange;
+  animation: glitch-1 2s infinite linear alternate-reverse;
+
+  @include screen-580 {
+    display: none;
+  }
+}
+
+.glitch-effect:before {
+  left: -2px;
+  text-shadow: 2px 0 $orange;
+  animation: glitch-2 2s infinite linear alternate-reverse;
+
+  @include screen-580 {
+    display: none;
+  }
+}
+
+
+@keyframes glitch-1 {
+  0% {
+    clip: rect(20px, auto, 51px, 0);
+  }
+
+  5% {
+    clip: rect(83px, auto, 102px, 0);
+  }
+
+  10% {
+    clip: rect(83px, auto, 105px, 0);
+  }
+
+  15% {
+    clip: rect(95px, auto, 11px, 0);
+  }
+
+  20% {
+    clip: rect(105px, auto, 56px, 0);
+  }
+
+  25% {
+    clip: rect(40px, auto, 19px, 0);
+  }
+
+  30% {
+    clip: rect(56px, auto, 97px, 0);
+  }
+
+  35% {
+    clip: rect(9px, auto, 17px, 0);
+  }
+
+  40% {
+    clip: rect(103px, auto, 53px, 0);
+  }
+
+  45% {
+    clip: rect(92px, auto, 6px, 0);
+  }
+
+  50% {
+    clip: rect(69px, auto, 46px, 0);
+  }
+
+  55% {
+    clip: rect(8px, auto, 87px, 0);
+  }
+
+  60% {
+    clip: rect(12px, auto, 15px, 0);
+  }
+
+  70% {
+    clip: rect(28px, auto, 106px, 0);
+  }
+
+  80% {
+    clip: rect(98px, auto, 63px, 0);
+  }
+
+  85% {
+    clip: rect(11px, auto, 44px, 0);
+  }
+
+  95% {
+    clip: rect(23px, auto, 84px, 0);
+  }
+
+  100% {
+    clip: rect(66px, auto, 91px, 0);
+  }
+}
+
+@keyframes glitch-2 {
+  0% {
+    clip: rect(86px, auto, 25px, 0);
+  }
+
+  5% {
+    clip: rect(30px, auto, 17px, 0);
+  }
+
+  10% {
+    clip: rect(54px, auto, 43px, 0);
+  }
+
+  15% {
+    clip: rect(10px, auto, 86px, 0);
+  }
+
+  25% {
+    clip: rect(62px, auto, 1px, 0);
+  }
+
+  30% {
+    clip: rect(61px, auto, 24px, 0);
+  }
+
+  35% {
+    clip: rect(38px, auto, 46px, 0);
+  }
+
+  40% {
+    clip: rect(115px, auto, 8px, 0);
+  }
+
+  45% {
+    clip: rect(87px, auto, 44px, 0);
+  }
+
+  50% {
+    clip: rect(6px, auto, 65px, 0);
+  }
+
+  55% {
+    clip: rect(83px, auto, 99px, 0);
+  }
+
+  65% {
+    clip: rect(25px, auto, 71px, 0);
+  }
+
+  70% {
+    clip: rect(37px, auto, 55px, 0);
+  }
+
+  75% {
+    clip: rect(115px, auto, 18px, 0);
+  }
+
+  80% {
+    clip: rect(68px, auto, 46px, 0);
+  }
+
+  90% {
+    clip: rect(47px, auto, 31px, 0);
+  }
+
+  95% {
+    clip: rect(47px, auto, 84px, 0);
+  }
+
+  100% {
+    clip: rect(93px, auto, 53px, 0);
+  }
+}

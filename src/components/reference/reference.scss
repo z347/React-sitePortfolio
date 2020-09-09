@@ -1,0 +1,21 @@
+@import "../../scss/partials/params";
+
+
+div {
+  > a {
+    color: $black-light;
+    cursor: pointer;
+    font-size: $normal;
+    text-decoration: none;
+
+    &:hover,
+    &.active {
+      color: $orange;
+    }
+  }
+
+  > span {
+    font-size: $normal;
+    color: $black-light;
+  }
+}

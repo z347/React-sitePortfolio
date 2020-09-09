@@ -1,0 +1,11 @@
+@import "../../scss/partials/params";
+@import "../../scss/partials/mixins";
+@import "../../scss/partials/media";
+
+#content {
+  > div {
+    :last-child .project {
+      border-bottom: 1px solid $white-muted;
+    }
+  }
+}

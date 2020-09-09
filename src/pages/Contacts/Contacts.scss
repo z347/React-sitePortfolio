@@ -1,0 +1,61 @@
+@import "../../scss/partials/params";
+@import "../../scss/partials/mixins";
+@import "../../scss/partials/media";
+
+main#content {
+  > div {
+    address.contacts {
+      margin-bottom: 100px;
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include clear-list;
+
+        li {
+          font-size: $normal;
+          font-style: normal;
+          font-weight: 700;
+          text-align: center;
+
+          @include screen-840 {
+            flex-basis: 50%;
+
+            &:nth-child(3),
+            &:nth-child(4) {
+              margin-top: 35px;
+            }
+          }
+
+          @include screen-580 {
+            flex-basis: 100%;
+            margin-top: 40px;
+
+            &:nth-child(1) {
+              margin-top: 0;
+            }
+          }
+
+          svg {
+            margin-right: 10px;
+            color: $orange;
+          }
+
+          a {
+            display: inline-block;
+            color: $black-light;
+            font-weight: 400;
+            padding-top: 12px;
+            text-decoration: none;
+
+            &:hover {
+              color: $orange;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import "../../scss/partials/params";
+@import "../../scss/partials/mixins";
+@import "../../scss/partials/media";
+
+span.mouse {
+  position: absolute;
+  bottom: 120px;
+
+  height: 40px;
+  color: $orange;
+  cursor: pointer;
+
+  @include height-600 {
+    bottom: 90px;
+  }
+
+  @include height-525 {
+    display: none;
+  }
+
+  > svg {
+    animation: mouse-anim 1.5s ease-out 0s infinite;
+  }
+}
+
+span.mouse.hiding {
+  display: none;
+}
+
+@keyframes mouse-anim {
+  0% {
+    transform: translateY(8px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(8px);
+  }
+}

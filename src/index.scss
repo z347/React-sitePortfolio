@@ -1,0 +1,52 @@
+@import "scss/partials/params";
+@import "scss/partials/mixins";
+@import "scss/partials/media";
+
+* {
+  @include clear;
+}
+
+html,
+body {
+  max-height: 100%;
+  max-width: 100%;
+  font-family: "Roboto Mono", serif;
+  font-size: 100%;
+  @include clear;
+  background: $orange;
+
+  > #root {
+    background-color: $white;
+    height: calc(100vh - 60px);
+    margin: 30px;
+
+    @include screen-840 {
+      height: calc(100vh - 30px);
+      margin: 15px;
+    }
+  }
+
+  >.line-top {
+    position: fixed;
+    top: 0;
+    height: 30px;
+    width: 100%;
+    background: $orange;
+
+    @include screen-840 {
+      height: 15px;
+    }
+  }
+
+  >.line-bot {
+    position: fixed;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+    background: $orange;
+
+    @include screen-840 {
+      height: 15px;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import "../../scss/partials/params";
+@import "../../scss/partials/mixins";
+@import "../../scss/partials/media";
+
+footer {
+  position: fixed;
+  right: 30px;
+  left: 30px;
+  bottom: 25px;
+  padding: 15px 20px 30px 20px;
+  background-color: $white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  @include screen-840 {
+    justify-content: center;
+    right: 15px;
+    left: 15px;
+    bottom: 15px;
+  }
+
+  span {
+    color: $gray-super-light;
+    font-size: $little;
+
+    @include screen-840 {
+      display: none;
+    }
+  }
+
+  ul {
+    @include clear-list;
+    display: flex;
+
+    li {
+      margin-left: 16px;
+
+      a {
+        color: $black-light;
+        cursor: pointer;
+
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+  }
+}

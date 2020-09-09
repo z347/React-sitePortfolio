@@ -1,0 +1,29 @@
+@mixin screen-840 {
+  @media only screen and (max-width: 840px) {
+    @content;
+  }
+}
+
+@mixin screen-580 {
+  @media only screen and (max-width: 580px) {
+    @content;
+  }
+}
+
+@mixin screen-480 {
+  @media only screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin height-600 {
+  @media only screen and (max-height: 525px) {
+    @content;
+  }
+}
+
+@mixin height-525 {
+  @media only screen and (max-height: 525px) {
+    @content;
+  }
+}
